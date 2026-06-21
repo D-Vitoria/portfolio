@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+<meta charset="UTF-8">
+<link rel="icon" type="image/svg+xml" href="../assets/img/favicon.svg">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Davore Studio — Diana Vitória de Araújo</title>
+<meta name="description" content="Identidade de marca do Davore Studio — estúdio criativo de design e comunicação fundado por Diana Vitória.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    darkMode: 'class',
+    theme: {
+      extend: {
+        colors: {
+          clay: { DEFAULT: '#C1583A', light: '#FBF1EE' },
+        },
+        fontFamily: {
+          serif: ['Fraunces', 'Georgia', 'serif'],
+          sans:  ['Inter', 'system-ui', 'sans-serif'],
+        },
+      }
+    }
+  }
+</script>
+<link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body class="bg-white dark:bg-zinc-950 text-zinc-800 dark:text-zinc-200 font-sans antialiased">
+
+<!-- NAV -->
+<header class="sticky top-0 z-50 bg-white/90 dark:bg-zinc-950/90 backdrop-blur-md border-b border-zinc-100 dark:border-zinc-800">
+  <div class="max-w-3xl mx-auto px-4 sm:px-8 py-3 flex items-center gap-4">
+    <a href="../trabalhos.html" class="text-sm text-zinc-400 dark:text-zinc-600 hover:text-zinc-900 dark:hover:text-zinc-100 transition-colors">← Trabalhos</a>
+    <span class="text-zinc-200 dark:text-zinc-800" aria-hidden="true">/</span>
+    <span class="text-sm text-zinc-500 dark:text-zinc-400">Davore Studio</span>
+    <button id="themeBtn" aria-label="Alternar tema" class="ml-auto w-9 h-9 flex items-center justify-center rounded-lg border border-zinc-200 dark:border-zinc-700 hover:bg-zinc-50 dark:hover:bg-zinc-800 transition-colors text-zinc-500 dark:text-zinc-400">
+      <svg id="iconMoon" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg>
+      <svg id="iconSun"  width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class="hidden"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
+    </button>
+  </div>
+</header>
+
+<main class="max-w-3xl mx-auto px-4 sm:px-8 py-16 sm:py-24">
+
+  <!-- Header do projeto -->
+  <div class="mb-12">
+    <p class="font-mono text-[11px] font-semibold text-clay uppercase tracking-[0.1em] mb-3">Estúdio próprio · Branding</p>
+    <h1 class="font-serif font-semibold text-4xl sm:text-5xl text-zinc-900 dark:text-zinc-50 leading-tight mb-4">Davore Studio</h1>
+    <p class="text-lg text-zinc-500 dark:text-zinc-400 leading-relaxed max-w-xl">Identidade de marca construída do zero — posicionamento, paleta, tipografia e estrutura de serviços para o meu próprio estúdio criativo.</p>
+  </div>
+
+  <!-- Capa do projeto -->
+  <div class="w-full rounded-2xl bg-amber-50 dark:bg-amber-950/20 flex items-center justify-center mb-12 aspect-video">
+    <span class="font-serif text-[120px] font-semibold text-amber-200 dark:text-amber-900 select-none leading-none">DS</span>
+  </div>
+
+  <!-- Meta -->
+  <div class="grid grid-cols-2 sm:grid-cols-4 gap-6 border-y border-zinc-100 dark:border-zinc-800 py-8 mb-12">
+    <div>
+      <p class="font-mono text-[10px] text-zinc-400 dark:text-zinc-600 uppercase tracking-widest mb-1">Tipo</p>
+      <p class="text-sm font-medium text-zinc-900 dark:text-zinc-100">Branding</p>
+    </div>
+    <div>
+      <p class="font-mono text-[10px] text-zinc-400 dark:text-zinc-600 uppercase tracking-widest mb-1">Ano</p>
+      <p class="text-sm font-medium text-zinc-900 dark:text-zinc-100">2025</p>
+    </div>
+    <div>
+      <p class="font-mono text-[10px] text-zinc-400 dark:text-zinc-600 uppercase tracking-widest mb-1">Ferramentas</p>
+      <p class="text-sm font-medium text-zinc-900 dark:text-zinc-100">Figma · Illustrator</p>
+    </div>
+    <div>
+      <p class="font-mono text-[10px] text-zinc-400 dark:text-zinc-600 uppercase tracking-widest mb-1">Papel</p>
+      <p class="text-sm font-medium text-zinc-900 dark:text-zinc-100">Designer</p>
+    </div>
+  </div>
+
+  <!-- Conteúdo -->
+  <div class="space-y-8 text-[15px] text-zinc-600 dark:text-zinc-400 leading-[1.8]">
+    <div>
+      <h2 class="font-serif font-semibold text-xl text-zinc-900 dark:text-zinc-50 mb-3">Contexto</h2>
+      <p>O Davore Studio é o meu estúdio de design e comunicação — um projeto pessoal que precisava de uma identidade própria antes de qualquer coisa. O desafio foi criar uma marca que transmitisse sofisticação e criatividade sem perder a proximidade com os clientes.</p>
+    </div>
+    <div>
+      <h2 class="font-serif font-semibold text-xl text-zinc-900 dark:text-zinc-50 mb-3">O que foi feito</h2>
+      <p>Desenvolvimento completo da identidade visual: naming, construção do logotipo, paleta de cores, sistema tipográfico e diretrizes de uso. A identidade foi pensada para funcionar tanto em materiais digitais quanto impressos.</p>
+    </div>
+    <div>
+      <h2 class="font-serif font-semibold text-xl text-zinc-900 dark:text-zinc-50 mb-3">Resultado</h2>
+      <p>Uma marca consistente que representa o posicionamento do estúdio — atualiza as peças de comunicação e serve de base para todos os materiais do Davore Studio.</p>
+    </div>
+  </div>
+
+</main>
+
+<footer class="border-t border-zinc-100 dark:border-zinc-800 py-8 text-center mt-16">
+  <a href="../trabalhos.html" class="text-sm text-zinc-400 hover:text-zinc-700 dark:hover:text-zinc-300 transition-colors">← Trabalhos</a>
+</footer>
+
+<script>
+  const html = document.documentElement;
+  const btn  = document.getElementById('themeBtn');
+  const moon = document.getElementById('iconMoon');
+  const sun  = document.getElementById('iconSun');
+  const theme = localStorage.getItem('theme') || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+  function setTheme(t) {
+    t === 'dark' ? html.classList.add('dark') : html.classList.remove('dark');
+    moon.classList.toggle('hidden', t === 'dark');
+    sun.classList.toggle('hidden',  t !== 'dark');
+  }
+  setTheme(theme);
+  btn.addEventListener('click', () => {
+    const isDark = html.classList.toggle('dark');
+    const next = isDark ? 'dark' : 'light';
+    localStorage.setItem('theme', next);
+    setTheme(next);
+  });
+</script>
+</body>
+</html>

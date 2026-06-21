@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+<meta charset="UTF-8">
+<link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Serviços — Diana Vitória de Araújo</title>
+<meta name="description" content="QA & Automação de Testes e Design & Identidade Visual — serviços oferecidos por Diana Vitória de Araújo.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    darkMode: 'class',
+    theme: { extend: {
+      colors: {
+        clay: { DEFAULT: '#C1583A' },
+        pass: { DEFAULT: '#1E8A45' },
+      },
+      fontFamily: {
+        serif: ['Fraunces', 'Georgia', 'serif'],
+        sans:  ['Inter', 'system-ui', 'sans-serif'],
+      },
+    }}
+  }
+</script>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body class="bg-white dark:bg-zinc-950 text-zinc-800 dark:text-zinc-200 font-sans antialiased transition-colors duration-300">
+
+<a href="#main" class="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 bg-clay text-white text-sm font-medium px-4 py-2 rounded-lg z-[9999]">Ir para conteúdo principal</a>
+
+<header class="sticky top-0 z-50 bg-white/90 dark:bg-zinc-950/90 backdrop-blur-md border-b border-zinc-100 dark:border-zinc-800 transition-colors">
+  <div class="max-w-5xl mx-auto px-4 sm:px-8 py-3 flex items-center gap-3">
+    <a href="index.html" aria-label="Diana Vitória — início" class="flex items-center gap-2 text-sm font-semibold text-zinc-900 dark:text-zinc-50 mr-auto shrink-0 rounded focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-clay">
+      <span class="w-2 h-2 rounded-full bg-pass shrink-0" aria-hidden="true"></span>
+      diana.log
+    </a>
+    <nav aria-label="Navegação principal" class="hidden md:block">
+      <ul class="flex list-none" role="list">
+        <li><a href="index.html"     class="text-sm text-zinc-500 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-50 px-3 py-2 rounded-lg hover:bg-zinc-50 dark:hover:bg-zinc-800/60 transition-colors">Início</a></li>
+        <li><a href="sobre.html"     class="text-sm text-zinc-500 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-50 px-3 py-2 rounded-lg hover:bg-zinc-50 dark:hover:bg-zinc-800/60 transition-colors">Sobre</a></li>
+        <li><a href="servicos.html"  class="text-sm text-zinc-900 dark:text-zinc-50 font-medium px-3 py-2 rounded-lg transition-colors">Serviços</a></li>
+        <li><a href="trabalhos.html" class="text-sm text-zinc-500 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-50 px-3 py-2 rounded-lg hover:bg-zinc-50 dark:hover:bg-zinc-800/60 transition-colors">Trabalhos</a></li>
+        <li><a href="contato.html"   class="text-sm text-zinc-500 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-50 px-3 py-2 rounded-lg hover:bg-zinc-50 dark:hover:bg-zinc-800/60 transition-colors">Contato</a></li>
+      </ul>
+    </nav>
+    <div class="flex items-center gap-2">
+      <button id="themeBtn" aria-label="Ativar tema escuro" title="Alternar tema" class="w-9 h-9 flex items-center justify-center rounded-lg border border-zinc-200 dark:border-zinc-700 hover:bg-zinc-50 dark:hover:bg-zinc-800 transition-colors text-zinc-500 dark:text-zinc-400 shrink-0">
+        <svg id="iconMoon" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg>
+        <svg id="iconSun"  width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class="hidden"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
+      </button>
+      <a href="contato.html" class="hidden sm:inline-flex items-center text-sm font-medium bg-zinc-900 dark:bg-zinc-100 text-white dark:text-zinc-900 px-4 py-2 rounded-lg hover:opacity-80 transition-opacity">Falar comigo</a>
+      <button id="navToggle" aria-label="Abrir menu" aria-expanded="false" aria-controls="mobileNav" class="md:hidden w-9 h-9 flex items-center justify-center rounded-lg border border-zinc-200 dark:border-zinc-700 hover:bg-zinc-50 dark:hover:bg-zinc-800 transition-colors text-zinc-600 dark:text-zinc-400 shrink-0">
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M2 4h12M2 8h12M2 12h12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+      </button>
+    </div>
+  </div>
+  <div id="mobileNav" class="md:hidden hidden border-t border-zinc-100 dark:border-zinc-800 bg-white dark:bg-zinc-950">
+    <nav class="max-w-5xl mx-auto px-4 py-2 flex flex-col" aria-label="Menu mobile">
+      <a href="index.html"     class="py-3.5 text-sm text-zinc-600 dark:text-zinc-400 border-b border-zinc-100 dark:border-zinc-800 hover:text-zinc-900 dark:hover:text-zinc-50 transition-colors">Início</a>
+      <a href="sobre.html"     class="py-3.5 text-sm text-zinc-600 dark:text-zinc-400 border-b border-zinc-100 dark:border-zinc-800 hover:text-zinc-900 dark:hover:text-zinc-50 transition-colors">Sobre</a>
+      <a href="servicos.html"  class="py-3.5 text-sm font-medium text-zinc-900 dark:text-zinc-50 border-b border-zinc-100 dark:border-zinc-800 transition-colors">Serviços</a>
+      <a href="trabalhos.html" class="py-3.5 text-sm text-zinc-600 dark:text-zinc-400 border-b border-zinc-100 dark:border-zinc-800 hover:text-zinc-900 dark:hover:text-zinc-50 transition-colors">Trabalhos</a>
+      <a href="contato.html"   class="py-3.5 text-sm text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-50 transition-colors">Contato</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main" class="max-w-5xl mx-auto px-4 sm:px-8 py-20 sm:py-32">
+
+  <h1 class="font-serif font-semibold text-3xl sm:text-4xl lg:text-5xl text-zinc-900 dark:text-zinc-50 max-w-xl leading-snug mb-6 reveal">O que posso fazer por você</h1>
+  <p class="text-[15px] text-zinc-500 dark:text-zinc-400 max-w-lg leading-relaxed mb-16 sm:mb-20 reveal">Atuo nas duas pontas — na qualidade do software e na construção de marcas. Cada projeto começa com escuta e termina com entrega coerente.</p>
+
+  <div class="grid grid-cols-1 sm:grid-cols-2 gap-px bg-zinc-100 dark:bg-zinc-800 border border-zinc-100 dark:border-zinc-800 rounded-2xl overflow-hidden reveal">
+
+    <div class="bg-white dark:bg-zinc-950 p-8 sm:p-10">
+      <p class="font-mono text-[10px] text-clay uppercase tracking-widest mb-4">01</p>
+      <h2 class="font-serif font-semibold text-xl text-zinc-900 dark:text-zinc-50 mb-4">QA &amp; Automação de Testes</h2>
+      <p class="text-sm text-zinc-500 dark:text-zinc-400 leading-relaxed mb-6">Planejamento, execução e automação de testes para garantir que o produto entregue o que foi prometido — com menos surpresas em produção.</p>
+      <ul class="space-y-2 text-sm text-zinc-600 dark:text-zinc-400">
+        <li class="flex items-center gap-2"><span class="w-1 h-1 rounded-full bg-clay shrink-0" aria-hidden="true"></span>Testes manuais e exploratórios</li>
+        <li class="flex items-center gap-2"><span class="w-1 h-1 rounded-full bg-clay shrink-0" aria-hidden="true"></span>Automação com Cypress e Playwright</li>
+        <li class="flex items-center gap-2"><span class="w-1 h-1 rounded-full bg-clay shrink-0" aria-hidden="true"></span>BDD / Gherkin</li>
+        <li class="flex items-center gap-2"><span class="w-1 h-1 rounded-full bg-clay shrink-0" aria-hidden="true"></span>Relatórios e documentação de qualidade</li>
+        <li class="flex items-center gap-2"><span class="w-1 h-1 rounded-full bg-clay shrink-0" aria-hidden="true"></span>Participação em times Scrum</li>
+      </ul>
+    </div>
+
+    <div class="bg-white dark:bg-zinc-950 p-8 sm:p-10">
+      <p class="font-mono text-[10px] text-clay uppercase tracking-widest mb-4">02</p>
+      <h2 class="font-serif font-semibold text-xl text-zinc-900 dark:text-zinc-50 mb-4">Design &amp; Identidade Visual</h2>
+      <p class="text-sm text-zinc-500 dark:text-zinc-400 leading-relaxed mb-6">Criação de marcas com coerência — do posicionamento à aplicação visual, passando por identidade, tipografia e materiais de comunicação.</p>
+      <ul class="space-y-2 text-sm text-zinc-600 dark:text-zinc-400">
+        <li class="flex items-center gap-2"><span class="w-1 h-1 rounded-full bg-clay shrink-0" aria-hidden="true"></span>Identidade visual e branding</li>
+        <li class="flex items-center gap-2"><span class="w-1 h-1 rounded-full bg-clay shrink-0" aria-hidden="true"></span>Materiais gráficos impressos e digitais</li>
+        <li class="flex items-center gap-2"><span class="w-1 h-1 rounded-full bg-clay shrink-0" aria-hidden="true"></span>Design para redes sociais</li>
+        <li class="flex items-center gap-2"><span class="w-1 h-1 rounded-full bg-clay shrink-0" aria-hidden="true"></span>Figma · Illustrator · Photoshop · Canva</li>
+      </ul>
+    </div>
+
+  </div>
+
+  <div class="mt-14 text-center reveal">
+    <p class="text-sm text-zinc-500 dark:text-zinc-400 mb-4">Quer conversar sobre um projeto?</p>
+    <a href="contato.html" class="inline-flex items-center gap-2 text-sm font-medium bg-zinc-900 dark:bg-zinc-100 text-white dark:text-zinc-900 px-6 py-3 rounded-xl hover:opacity-80 transition-opacity">Entrar em contato →</a>
+  </div>
+
+</main>
+
+<footer class="border-t border-zinc-100 dark:border-zinc-800 py-12 text-center mt-20">
+  <div class="max-w-5xl mx-auto px-4 sm:px-8">
+    <p class="font-serif italic text-zinc-500 dark:text-zinc-500 text-lg">Diana Vitória de Araújo</p>
+    <div class="flex flex-wrap justify-center gap-1 mt-4">
+      <a href="https://www.linkedin.com/in/d-vitoria/" target="_blank" rel="noopener" class="text-sm text-zinc-400 dark:text-zinc-600 px-3 py-1.5 rounded-lg hover:text-zinc-700 dark:hover:text-zinc-300 hover:bg-zinc-50 dark:hover:bg-zinc-800/60 transition-colors">LinkedIn</a>
+      <a href="sobre.html"     class="text-sm text-zinc-400 dark:text-zinc-600 px-3 py-1.5 rounded-lg hover:text-zinc-700 dark:hover:text-zinc-300 hover:bg-zinc-50 dark:hover:bg-zinc-800/60 transition-colors">Sobre</a>
+      <a href="servicos.html"  class="text-sm text-zinc-400 dark:text-zinc-600 px-3 py-1.5 rounded-lg hover:text-zinc-700 dark:hover:text-zinc-300 hover:bg-zinc-50 dark:hover:bg-zinc-800/60 transition-colors">Serviços</a>
+      <a href="trabalhos.html" class="text-sm text-zinc-400 dark:text-zinc-600 px-3 py-1.5 rounded-lg hover:text-zinc-700 dark:hover:text-zinc-300 hover:bg-zinc-50 dark:hover:bg-zinc-800/60 transition-colors">Trabalhos</a>
+      <a href="contato.html"   class="text-sm text-zinc-400 dark:text-zinc-600 px-3 py-1.5 rounded-lg hover:text-zinc-700 dark:hover:text-zinc-300 hover:bg-zinc-50 dark:hover:bg-zinc-800/60 transition-colors">Contato</a>
+    </div>
+    <p class="text-xs text-zinc-300 dark:text-zinc-700 mt-6">© 2026 Diana Vitória de Araújo</p>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>

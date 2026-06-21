@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+<meta charset="UTF-8">
+<link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sobre — Diana Vitória de Araújo</title>
+<meta name="description" content="Conheça Diana Vitória de Araújo — analista de QA, designer em formação e fundadora do Davore Studio.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    darkMode: 'class',
+    theme: { extend: {
+      colors: {
+        clay: { DEFAULT: '#C1583A' },
+        pass: { DEFAULT: '#1E8A45' },
+      },
+      fontFamily: {
+        serif: ['Fraunces', 'Georgia', 'serif'],
+        sans:  ['Inter', 'system-ui', 'sans-serif'],
+      },
+    }}
+  }
+</script>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body class="bg-white dark:bg-zinc-950 text-zinc-800 dark:text-zinc-200 font-sans antialiased transition-colors duration-300">
+
+<a href="#main" class="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 bg-clay text-white text-sm font-medium px-4 py-2 rounded-lg z-[9999]">Ir para conteúdo principal</a>
+
+<header class="sticky top-0 z-50 bg-white/90 dark:bg-zinc-950/90 backdrop-blur-md border-b border-zinc-100 dark:border-zinc-800 transition-colors">
+  <div class="max-w-5xl mx-auto px-4 sm:px-8 py-3 flex items-center gap-3">
+    <a href="index.html" aria-label="Diana Vitória — início" class="flex items-center gap-2 text-sm font-semibold text-zinc-900 dark:text-zinc-50 mr-auto shrink-0 rounded focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-clay">
+      <span class="w-2 h-2 rounded-full bg-pass shrink-0" aria-hidden="true"></span>
+      diana.log
+    </a>
+    <nav aria-label="Navegação principal" class="hidden md:block">
+      <ul class="flex list-none" role="list">
+        <li><a href="index.html"     class="text-sm text-zinc-500 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-50 px-3 py-2 rounded-lg hover:bg-zinc-50 dark:hover:bg-zinc-800/60 transition-colors">Início</a></li>
+        <li><a href="sobre.html"     class="text-sm text-zinc-900 dark:text-zinc-50 font-medium px-3 py-2 rounded-lg transition-colors">Sobre</a></li>
+        <li><a href="servicos.html"  class="text-sm text-zinc-500 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-50 px-3 py-2 rounded-lg hover:bg-zinc-50 dark:hover:bg-zinc-800/60 transition-colors">Serviços</a></li>
+        <li><a href="trabalhos.html" class="text-sm text-zinc-500 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-50 px-3 py-2 rounded-lg hover:bg-zinc-50 dark:hover:bg-zinc-800/60 transition-colors">Trabalhos</a></li>
+        <li><a href="contato.html"   class="text-sm text-zinc-500 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-50 px-3 py-2 rounded-lg hover:bg-zinc-50 dark:hover:bg-zinc-800/60 transition-colors">Contato</a></li>
+      </ul>
+    </nav>
+    <div class="flex items-center gap-2">
+      <button id="themeBtn" aria-label="Ativar tema escuro" title="Alternar tema" class="w-9 h-9 flex items-center justify-center rounded-lg border border-zinc-200 dark:border-zinc-700 hover:bg-zinc-50 dark:hover:bg-zinc-800 transition-colors text-zinc-500 dark:text-zinc-400 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-clay shrink-0">
+        <svg id="iconMoon" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg>
+        <svg id="iconSun"  width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class="hidden"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
+      </button>
+      <a href="contato.html" class="hidden sm:inline-flex items-center text-sm font-medium bg-zinc-900 dark:bg-zinc-100 text-white dark:text-zinc-900 px-4 py-2 rounded-lg hover:opacity-80 transition-opacity">Falar comigo</a>
+      <button id="navToggle" aria-label="Abrir menu" aria-expanded="false" aria-controls="mobileNav" class="md:hidden w-9 h-9 flex items-center justify-center rounded-lg border border-zinc-200 dark:border-zinc-700 hover:bg-zinc-50 dark:hover:bg-zinc-800 transition-colors text-zinc-600 dark:text-zinc-400 shrink-0">
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M2 4h12M2 8h12M2 12h12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+      </button>
+    </div>
+  </div>
+  <div id="mobileNav" class="md:hidden hidden border-t border-zinc-100 dark:border-zinc-800 bg-white dark:bg-zinc-950">
+    <nav class="max-w-5xl mx-auto px-4 py-2 flex flex-col" aria-label="Menu mobile">
+      <a href="index.html"     class="py-3.5 text-sm text-zinc-600 dark:text-zinc-400 border-b border-zinc-100 dark:border-zinc-800 hover:text-zinc-900 dark:hover:text-zinc-50 transition-colors">Início</a>
+      <a href="sobre.html"     class="py-3.5 text-sm font-medium text-zinc-900 dark:text-zinc-50 border-b border-zinc-100 dark:border-zinc-800 transition-colors">Sobre</a>
+      <a href="servicos.html"  class="py-3.5 text-sm text-zinc-600 dark:text-zinc-400 border-b border-zinc-100 dark:border-zinc-800 hover:text-zinc-900 dark:hover:text-zinc-50 transition-colors">Serviços</a>
+      <a href="trabalhos.html" class="py-3.5 text-sm text-zinc-600 dark:text-zinc-400 border-b border-zinc-100 dark:border-zinc-800 hover:text-zinc-900 dark:hover:text-zinc-50 transition-colors">Trabalhos</a>
+      <a href="contato.html"   class="py-3.5 text-sm text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-50 transition-colors">Contato</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main" class="max-w-5xl mx-auto px-4 sm:px-8 py-20 sm:py-32">
+
+  <!-- Pull quote -->
+  <blockquote class="font-serif font-normal italic text-2xl sm:text-3xl lg:text-[36px] leading-snug text-zinc-900 dark:text-zinc-50 max-w-3xl mb-16 sm:mb-20 reveal">
+    "Qualidade não é só ausência de bugs: é coerência entre o que se promete e o que se entrega."
+  </blockquote>
+
+  <!-- Bio + skills -->
+  <div class="grid grid-cols-1 sm:grid-cols-[1fr_260px] gap-12 sm:gap-16 mb-24 reveal">
+    <div class="space-y-5 text-[15px] text-zinc-600 dark:text-zinc-400 leading-[1.85]">
+      <p>Sou Diana, analista de QA — hoje à frente da qualidade do <strong class="font-semibold text-zinc-900 dark:text-zinc-100">eFornecedor</strong>, sistema de cadastro e gestão de fornecedores dentro do ecossistema SIADES. No dia a dia, isso significa planejar testes, automatizar cenários e garantir que o que foi prometido chegue inteiro até quem usa.</p>
+      <p>Fora do expediente, construo a <strong class="font-semibold text-zinc-900 dark:text-zinc-100">Davore Studio</strong>, meu estúdio de design e comunicação, e curso Publicidade &amp; Propaganda e Design Gráfico — uma transição deliberada e gradual da engenharia de qualidade para a criação de marcas.</p>
+      <p>Essa lógica de coerência vale tanto para um sistema quanto para uma marca. É o que une os dois mundos que vivo.</p>
+    </div>
+    <div class="space-y-6">
+      <div>
+        <p class="font-mono text-[10px] text-zinc-400 dark:text-zinc-600 uppercase tracking-widest mb-2">QA &amp; Automação</p>
+        <p class="text-sm text-zinc-600 dark:text-zinc-400 leading-relaxed">Cypress · Playwright · BDD / Gherkin · SQL · Scrum</p>
+      </div>
+      <div>
+        <p class="font-mono text-[10px] text-zinc-400 dark:text-zinc-600 uppercase tracking-widest mb-2">Design &amp; Comunicação</p>
+        <p class="text-sm text-zinc-600 dark:text-zinc-400 leading-relaxed">Figma · Illustrator · Photoshop · CorelDRAW · Canva</p>
+      </div>
+      <div>
+        <p class="font-mono text-[10px] text-zinc-400 dark:text-zinc-600 uppercase tracking-widest mb-2">Localização</p>
+        <p class="text-sm text-zinc-600 dark:text-zinc-400">Penápolis, SP — disponível remotamente</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Experiência -->
+  <h2 class="font-serif font-semibold text-2xl sm:text-3xl text-zinc-900 dark:text-zinc-50 mb-10 reveal">Experiência</h2>
+  <ol class="relative ml-3 border-l-2 border-zinc-100 dark:border-zinc-800 mb-24 reveal" aria-label="Linha do tempo">
+
+    <!-- AZ Tecnologia em Gestão -->
+    <li class="relative mb-12 pl-8">
+      <span class="absolute -left-[11px] top-1.5 w-5 h-5 rounded-full bg-clay border-2 border-clay shrink-0" aria-hidden="true"></span>
+      <div class="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-0.5">
+        <h3 class="font-serif font-semibold text-lg text-zinc-900 dark:text-zinc-50">AZ Tecnologia em Gestão</h3>
+        <span class="font-mono text-[11px] text-zinc-400 dark:text-zinc-600 shrink-0">out 2025 — atual</span>
+      </div>
+      <p class="font-mono text-[10.5px] text-zinc-400 dark:text-zinc-600 mt-0.5">remoto · Campo Grande, MS</p>
+
+      <ol class="exp-nested relative mt-6 ml-1 space-y-7">
+        <li class="relative pl-6">
+          <span class="absolute -left-[5px] top-1.5 w-2.5 h-2.5 rounded-full bg-clay shrink-0" aria-hidden="true"></span>
+          <div class="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-0.5">
+            <h4 class="font-semibold text-sm text-zinc-900 dark:text-zinc-100">Analista de Teste / QA</h4>
+            <span class="font-mono text-[11px] text-zinc-400 dark:text-zinc-600 shrink-0">abr 2026 — atual</span>
+          </div>
+          <span class="inline-flex items-center gap-1.5 mt-1.5 text-[10px] font-mono font-medium px-2 py-0.5 rounded-full bg-pass/10 text-pass border border-pass/40">● ativo</span>
+          <ul class="mt-3 space-y-1.5 list-disc list-outside ml-4">
+            <li class="text-sm text-zinc-600 dark:text-zinc-400">QA simultâneo em 3 projetos: eFornecedor, Gerador de Relatórios e BI</li>
+            <li class="text-sm text-zinc-600 dark:text-zinc-400">Testes manuais e automação com Cypress no eFornecedor</li>
+            <li class="text-sm text-zinc-600 dark:text-zinc-400">Cenários definidos com BDD/Gherkin, em times Scrum</li>
+            <li class="text-sm text-zinc-600 dark:text-zinc-400">Foco em prevenção de defeitos e melhoria contínua de processo</li>
+          </ul>
+        </li>
+
+        <li class="relative pl-6">
+          <span class="absolute -left-[5px] top-1.5 w-2.5 h-2.5 rounded-full bg-zinc-300 dark:bg-zinc-600 shrink-0" aria-hidden="true"></span>
+          <div class="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-0.5">
+            <h4 class="font-semibold text-sm text-zinc-900 dark:text-zinc-100">Estagiária de Garantia de Qualidade</h4>
+            <span class="font-mono text-[11px] text-zinc-400 dark:text-zinc-600 shrink-0">out 2025 — abr 2026 · 6 meses</span>
+          </div>
+          <ul class="mt-3 space-y-1.5 list-disc list-outside ml-4">
+            <li class="text-sm text-zinc-600 dark:text-zinc-400">Execução de testes manuais e registro de defeitos</li>
+            <li class="text-sm text-zinc-600 dark:text-zinc-400">Apoio inicial à automação de testes</li>
+          </ul>
+        </li>
+      </ol>
+    </li>
+
+    <!-- Grupo BMG Foods -->
+    <li class="relative mb-12 pl-8">
+      <span class="absolute -left-[11px] top-1.5 w-5 h-5 rounded-full bg-white dark:bg-zinc-950 border-2 border-zinc-300 dark:border-zinc-600 shrink-0" aria-hidden="true"></span>
+      <div class="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-0.5">
+        <h3 class="font-serif font-semibold text-lg text-zinc-900 dark:text-zinc-50">Grupo BMG Foods</h3>
+        <span class="font-mono text-[11px] text-zinc-400 dark:text-zinc-600 shrink-0">mar 2024 — set 2025 · 1 ano e 7 meses</span>
+      </div>
+      <p class="font-mono text-[10.5px] text-zinc-400 dark:text-zinc-600 mt-0.5">Penápolis, SP</p>
+
+      <ol class="exp-nested relative mt-6 ml-1 space-y-7">
+        <li class="relative pl-6">
+          <span class="absolute -left-[5px] top-1.5 w-2.5 h-2.5 rounded-full bg-zinc-300 dark:bg-zinc-600 shrink-0" aria-hidden="true"></span>
+          <div class="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-0.5">
+            <h4 class="font-semibold text-sm text-zinc-900 dark:text-zinc-100">Assistente de Garantia da Qualidade</h4>
+            <span class="font-mono text-[11px] text-zinc-400 dark:text-zinc-600 shrink-0">abr 2025 — set 2025 · 6 meses</span>
+          </div>
+          <ul class="mt-3 space-y-1.5 list-disc list-outside ml-4">
+            <li class="text-sm text-zinc-600 dark:text-zinc-400">Testes manuais, funcionais e exploratórios</li>
+            <li class="text-sm text-zinc-600 dark:text-zinc-400">Validação de fluxo e usabilidade com Figma</li>
+          </ul>
+        </li>
+
+        <li class="relative pl-6">
+          <span class="absolute -left-[5px] top-1.5 w-2.5 h-2.5 rounded-full bg-zinc-200 dark:bg-zinc-700 shrink-0" aria-hidden="true"></span>
+          <div class="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-0.5">
+            <h4 class="font-semibold text-sm text-zinc-900 dark:text-zinc-100">Suporte Técnico</h4>
+            <span class="font-mono text-[11px] text-zinc-400 dark:text-zinc-600 shrink-0">mar 2024 — abr 2025 · 1 ano e 2 meses</span>
+          </div>
+          <ul class="mt-3 space-y-1.5 list-disc list-outside ml-4">
+            <li class="text-sm text-zinc-600 dark:text-zinc-400">Análise inicial de incidentes e priorização de demandas</li>
+            <li class="text-sm text-zinc-600 dark:text-zinc-400">Base de diagnóstico que levou à transição para QA</li>
+          </ul>
+        </li>
+      </ol>
+    </li>
+
+    <!-- Kelv Gráfica -->
+    <li class="relative pl-8">
+      <span class="absolute -left-[11px] top-1.5 w-5 h-5 rounded-full bg-white dark:bg-zinc-950 border-2 border-zinc-200 dark:border-zinc-700 shrink-0" aria-hidden="true"></span>
+      <div class="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-0.5">
+        <h3 class="font-serif font-semibold text-lg text-zinc-900 dark:text-zinc-50">Kelv Gráfica</h3>
+        <span class="font-mono text-[11px] text-zinc-400 dark:text-zinc-600 shrink-0">set 2023 — dez 2023</span>
+      </div>
+      <p class="font-mono text-[10.5px] text-zinc-400 dark:text-zinc-600 mt-0.5">Penápolis, SP · freelance</p>
+
+      <ol class="relative mt-6 ml-1 border-l border-zinc-200 dark:border-zinc-700">
+        <li class="relative pl-6">
+          <span class="absolute -left-[5px] top-1.5 w-2.5 h-2.5 rounded-full bg-zinc-200 dark:bg-zinc-700 shrink-0" aria-hidden="true"></span>
+          <div class="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-0.5">
+            <h4 class="font-semibold text-sm text-zinc-900 dark:text-zinc-100">Designer Gráfica</h4>
+            <span class="font-mono text-[11px] text-zinc-400 dark:text-zinc-600 shrink-0">4 meses</span>
+          </div>
+          <ul class="mt-3 space-y-1.5 list-disc list-outside ml-4">
+            <li class="text-sm text-zinc-600 dark:text-zinc-400">Materiais gráficos para mídia impressa e digital</li>
+            <li class="text-sm text-zinc-600 dark:text-zinc-400">Canva, CorelDRAW, Illustrator e Photoshop</li>
+          </ul>
+        </li>
+      </ol>
+    </li>
+
+  </ol>
+
+  <!-- Formação -->
+  <h2 class="font-serif font-semibold text-2xl sm:text-3xl text-zinc-900 dark:text-zinc-50 mb-10 reveal">Formação</h2>
+  <div class="grid grid-cols-1 sm:grid-cols-2 gap-12 sm:gap-16 reveal">
+    <div>
+      <p class="font-mono text-[10px] text-zinc-400 dark:text-zinc-600 uppercase tracking-widest mb-5">Graduação</p>
+      <div class="space-y-5">
+        <div class="border-l-2 border-zinc-100 dark:border-zinc-800 pl-5">
+          <h3 class="font-serif font-semibold text-base text-zinc-900 dark:text-zinc-50">Bacharel em Publicidade e Propaganda</h3>
+          <p class="text-sm text-zinc-500 dark:text-zinc-400 mt-1">UNINTER — Centro Universitário Internacional</p>
+          <p class="font-mono text-[11px] text-zinc-400 dark:text-zinc-600 mt-1">2026 — 2030 · em andamento</p>
+        </div>
+        <div class="border-l-2 border-zinc-100 dark:border-zinc-800 pl-5">
+          <h3 class="font-serif font-semibold text-base text-zinc-900 dark:text-zinc-50">Tecnólogo em Design Gráfico</h3>
+          <p class="text-sm text-zinc-500 dark:text-zinc-400 mt-1">UNINTER — Centro Universitário Internacional</p>
+          <p class="font-mono text-[11px] text-zinc-400 dark:text-zinc-600 mt-1">mai 2026 — mai 2028 · em andamento</p>
+        </div>
+      </div>
+    </div>
+    <div>
+      <p class="font-mono text-[10px] text-zinc-400 dark:text-zinc-600 uppercase tracking-widest mb-5">Certificações</p>
+      <div class="divide-y divide-zinc-100 dark:divide-zinc-800">
+        <div class="flex justify-between items-start gap-4 pb-4">
+          <div>
+            <a href="https://cursos.alura.com.br/certificate/b4dae8a7-a5c7-4ca8-9c17-4dd06b4e1590?lang" target="_blank" rel="noopener" class="text-sm font-semibold text-zinc-900 dark:text-zinc-50 hover:text-clay transition-colors">UI Design: teste de usabilidade ↗</a>
+            <p class="text-xs text-zinc-400 dark:text-zinc-600 mt-1">Alura</p>
+          </div>
+          <span class="font-mono text-[11px] text-zinc-400 dark:text-zinc-600 shrink-0">out 2025</span>
+        </div>
+        <div class="flex justify-between items-start gap-4 pt-4">
+          <div>
+            <a href="https://cursos.alura.com.br/degree/certificate/7695424a-6e9b-48e4-9207-fed22306a477" target="_blank" rel="noopener" class="text-sm font-semibold text-zinc-900 dark:text-zinc-50 hover:text-clay transition-colors">Formação Technical Writing ↗</a>
+            <p class="text-xs text-zinc-400 dark:text-zinc-600 mt-1">Alura</p>
+          </div>
+          <span class="font-mono text-[11px] text-zinc-400 dark:text-zinc-600 shrink-0">set 2025</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</main>
+
+<footer class="border-t border-zinc-100 dark:border-zinc-800 py-12 text-center mt-20">
+  <div class="max-w-5xl mx-auto px-4 sm:px-8">
+    <p class="font-serif italic text-zinc-500 dark:text-zinc-500 text-lg">Diana Vitória de Araújo</p>
+    <div class="flex flex-wrap justify-center gap-1 mt-4">
+      <a href="https://www.linkedin.com/in/d-vitoria/" target="_blank" rel="noopener" class="text-sm text-zinc-400 dark:text-zinc-600 px-3 py-1.5 rounded-lg hover:text-zinc-700 dark:hover:text-zinc-300 hover:bg-zinc-50 dark:hover:bg-zinc-800/60 transition-colors">LinkedIn</a>
+      <a href="sobre.html"     class="text-sm text-zinc-400 dark:text-zinc-600 px-3 py-1.5 rounded-lg hover:text-zinc-700 dark:hover:text-zinc-300 hover:bg-zinc-50 dark:hover:bg-zinc-800/60 transition-colors">Sobre</a>
+      <a href="servicos.html"  class="text-sm text-zinc-400 dark:text-zinc-600 px-3 py-1.5 rounded-lg hover:text-zinc-700 dark:hover:text-zinc-300 hover:bg-zinc-50 dark:hover:bg-zinc-800/60 transition-colors">Serviços</a>
+      <a href="trabalhos.html" class="text-sm text-zinc-400 dark:text-zinc-600 px-3 py-1.5 rounded-lg hover:text-zinc-700 dark:hover:text-zinc-300 hover:bg-zinc-50 dark:hover:bg-zinc-800/60 transition-colors">Trabalhos</a>
+      <a href="contato.html"   class="text-sm text-zinc-400 dark:text-zinc-600 px-3 py-1.5 rounded-lg hover:text-zinc-700 dark:hover:text-zinc-300 hover:bg-zinc-50 dark:hover:bg-zinc-800/60 transition-colors">Contato</a>
+    </div>
+    <p class="text-xs text-zinc-300 dark:text-zinc-700 mt-6">© 2026 Diana Vitória de Araújo</p>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>
