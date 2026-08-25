@@ -11,7 +11,7 @@ export default function Sobre() {
     <div className="max-w-5xl mx-auto px-4 sm:px-8 py-20 sm:py-32">
 
       <blockquote className="font-serif font-normal italic text-2xl sm:text-3xl lg:text-[36px] leading-snug text-zinc-900 dark:text-zinc-50 max-w-3xl mb-16 sm:mb-20 reveal">
-        "Qualidade não é só ausência de bugs: é coerência entre o que se promete e o que se entrega."
+        &ldquo;Qualidade não é só ausência de bugs: é coerência entre o que se promete e o que se entrega.&rdquo;
       </blockquote>
 
       {/* Bio + skills */}
