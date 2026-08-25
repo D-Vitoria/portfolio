@@ -1,9 +1,10 @@
 import type { Metadata } from 'next';
 import TransitionLink from '@/components/TransitionLink';
+import { basePath } from '@/lib/basePath';
 
 export const metadata: Metadata = {
   title: 'Serviços',
-  openGraph: { url: 'https://portfolio-d-vitorias-projects.vercel.app/servicos' },
+  openGraph: { url: `https://d-vitoria.github.io${basePath}/servicos` },
 };
 
 export default function Servicos() {

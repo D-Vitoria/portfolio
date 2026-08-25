@@ -6,6 +6,7 @@ import Nav from '@/components/Nav';
 import Footer from '@/components/Footer';
 import Curtain from '@/components/Curtain';
 import ScrollReveal from '@/components/ScrollReveal';
+import { basePath } from '@/lib/basePath';
 
 const fraunces = Fraunces({
   subsets: ['latin'],
@@ -23,12 +24,12 @@ export const metadata: Metadata = {
   title: { default: 'Diana Vitória de Araújo — QA Analyst & Designer', template: '%s — Diana Vitória de Araújo' },
   description: 'Analista de QA especialista em automação com Cypress e Playwright, e designer em formação. Baseada em Penápolis, SP — disponível remotamente.',
   authors: [{ name: 'Diana Vitória de Araújo' }],
-  metadataBase: new URL('https://portfolio-d-vitorias-projects.vercel.app'),
+  metadataBase: new URL('https://d-vitoria.github.io'),
   openGraph: {
     type: 'website',
     locale: 'pt_BR',
     siteName: 'Diana Vitória de Araújo',
-    images: [{ url: '/assets/img/og.jpg', width: 1200, height: 630 }],
+    images: [{ url: `${basePath}/assets/img/og.jpg`, width: 1200, height: 630 }],
   },
   twitter: { card: 'summary_large_image' },
 };

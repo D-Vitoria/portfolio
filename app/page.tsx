@@ -1,10 +1,11 @@
 import type { Metadata } from 'next';
 import TransitionLink from '@/components/TransitionLink';
 import Avatar from '@/components/Avatar';
+import { basePath } from '@/lib/basePath';
 
 export const metadata: Metadata = {
   title: 'Diana Vitória de Araújo — QA Analyst & Designer',
-  openGraph: { url: 'https://portfolio-d-vitorias-projects.vercel.app/' },
+  openGraph: { url: `https://d-vitoria.github.io${basePath}/` },
 };
 
 export default function Home() {
@@ -14,7 +15,7 @@ export default function Home() {
 
         <div className="flex items-center justify-between">
           <div className="flex items-center gap-3">
-            <Avatar src="/assets/img/image.png" alt="Diana Vitória de Araújo" className="w-9 h-9 rounded-full object-cover object-top border border-zinc-200 dark:border-zinc-700 shrink-0" />
+            <Avatar src={`${basePath}/assets/img/image.png`} alt="Diana Vitória de Araújo" className="w-9 h-9 rounded-full object-cover object-top border border-zinc-200 dark:border-zinc-700 shrink-0" />
             <span className="font-mono text-[10px] sm:text-[11px] text-zinc-400 dark:text-zinc-500 uppercase tracking-widest">QA Analyst &amp; Designer</span>
           </div>
           <span className="inline-flex items-center gap-2 text-[10px] font-mono font-medium text-pass px-2.5 py-1 rounded-full border border-pass/30 bg-pass/10">
@@ -37,7 +38,7 @@ export default function Home() {
         <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-6 pt-8 border-t border-zinc-100 dark:border-zinc-800">
           <p className="text-[15px] text-zinc-500 dark:text-zinc-400 max-w-sm leading-relaxed">Garanto que o que foi prometido chegue inteiro até quem usa — em sistemas e em marcas.</p>
           <div className="flex flex-col items-start sm:items-end gap-3 shrink-0">
-            <a href="/assets/diana-vitoria-cv.pdf" download className="w-full inline-flex items-center justify-center gap-2 text-sm font-medium bg-zinc-900 dark:bg-zinc-100 text-white dark:text-zinc-900 px-5 py-3 rounded-xl hover:opacity-80 transition-opacity">
+            <a href={`${basePath}/assets/diana-vitoria-cv.pdf`} download className="w-full inline-flex items-center justify-center gap-2 text-sm font-medium bg-zinc-900 dark:bg-zinc-100 text-white dark:text-zinc-900 px-5 py-3 rounded-xl hover:opacity-80 transition-opacity">
               <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
               Currículo
             </a>

@@ -1,8 +1,9 @@
 import type { Metadata } from 'next';
+import { basePath } from '@/lib/basePath';
 
 export const metadata: Metadata = {
   title: 'Contato',
-  openGraph: { url: 'https://portfolio-d-vitorias-projects.vercel.app/contato' },
+  openGraph: { url: `https://d-vitoria.github.io${basePath}/contato` },
 };
 
 export default function Contato() {

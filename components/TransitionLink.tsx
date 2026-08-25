@@ -1,6 +1,9 @@
 'use client';
 import { useRouter } from 'next/navigation';
 import { MouseEvent, ReactNode } from 'react';
+import { basePath } from '@/lib/basePath';
+
+const withBasePath = (href: string) => (href.startsWith('/') ? `${basePath}${href}` : href);
 
 interface Props {
   href: string;
@@ -21,7 +24,7 @@ export default function TransitionLink({ href, children, download, target, rel, 
   const router = useRouter();
 
   if (download || target === '_blank') {
-    return <a href={href} target={target} rel={rel} download={download} onClick={onClick} {...rest}>{children}</a>;
+    return <a href={withBasePath(href)} target={target} rel={rel} download={download} onClick={onClick} {...rest}>{children}</a>;
   }
 
   const handleClick = (e: MouseEvent<HTMLAnchorElement>) => {
@@ -38,5 +41,5 @@ export default function TransitionLink({ href, children, download, target, rel, 
     }
   };
 
-  return <a href={href} onClick={handleClick} rel={rel} {...rest}>{children}</a>;
+  return <a href={withBasePath(href)} onClick={handleClick} rel={rel} {...rest}>{children}</a>;
 }
