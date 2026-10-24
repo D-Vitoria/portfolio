@@ -14,7 +14,7 @@ const pt = {
     themeToggle: 'Alternar modo escuro',
     langSwitch: 'EN',
     langSwitchLabel: 'Read this site in English',
-    credit: 'Diana Vitória de Araújo · Portfolio 2026',
+    credit: 'Diana Vitória de Araújo · Portfolio 2027',
     project: 'Projeto',
     prev: 'Anterior',
     next: 'Próxima',
@@ -34,7 +34,7 @@ const pt = {
     print: 'Portfolio para imprimir',
   },
   print: {
-    heading: 'Portfolio 2026',
+    heading: 'Portfolio 2027',
     button: 'Imprimir / salvar em PDF',
     hint: 'Na janela de impressão, escolha "Salvar como PDF".',
     back: '← Voltar ao site',
@@ -43,7 +43,7 @@ const pt = {
   },
   home: {
     aria: 'Apresentação',
-    kicker: 'Portfolio · Edição 2026',
+    kicker: 'Portfolio · Edição 2027',
     lead: 'Garanto que o que foi prometido chegue inteiro até quem usa — em sistemas e em marcas.',
     stamp: ['Comunicação', 'criativa'],
     sub: 'QA Analyst & Designer',
@@ -313,7 +313,7 @@ const en: Content = {
     themeToggle: 'Toggle dark mode',
     langSwitch: 'PT',
     langSwitchLabel: 'Ler este site em português',
-    credit: 'Diana Vitória de Araújo · Portfolio 2026',
+    credit: 'Diana Vitória de Araújo · Portfolio 2027',
     project: 'Project',
     prev: 'Previous',
     next: 'Next',
@@ -333,7 +333,7 @@ const en: Content = {
     print: 'Printable portfolio',
   },
   print: {
-    heading: 'Portfolio 2026',
+    heading: 'Portfolio 2027',
     button: 'Print / save as PDF',
     hint: 'In the print dialog, choose "Save as PDF".',
     back: '← Back to the site',
@@ -342,7 +342,7 @@ const en: Content = {
   },
   home: {
     aria: 'Introduction',
-    kicker: 'Portfolio · 2026 Edition',
+    kicker: 'Portfolio · 2027 Edition',
     lead: 'I make sure what was promised arrives whole to the people who use it — in systems and in brands.',
     stamp: ['Creative', 'communication'],
     sub: 'QA Analyst & Designer',

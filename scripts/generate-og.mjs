@@ -31,7 +31,7 @@ const card = (title, subtitle, accent) =>
       background: '#f3f2f2', color: '#201e1d', padding: 64, border: '14px solid #201e1d',
     },
     [
-      el('div', { display: 'flex', fontSize: 28, letterSpacing: 4, textTransform: 'uppercase', color: '#605d5d' }, 'Portfolio · 2026'),
+      el('div', { display: 'flex', fontSize: 28, letterSpacing: 4, textTransform: 'uppercase', color: '#605d5d' }, 'Portfolio · 2027'),
       el('div', { display: 'flex', flexDirection: 'column' }, [
         el('div', { display: 'flex', fontSize: 112, fontWeight: 900, lineHeight: 0.95, textTransform: 'uppercase', color: accent }, title),
         el('div', { display: 'flex', fontSize: 38, marginTop: 28 }, subtitle),
