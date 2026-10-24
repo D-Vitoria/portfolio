@@ -251,9 +251,14 @@ textarea.input { min-height: 90px; resize: vertical; }
 }
 .about-photo {
   flex: 4 1 280px; min-width: 0; min-height: 360px; position: relative; overflow: hidden;
-  border-right: 1px solid var(--color-divider); background: var(--color-neutral-300);
+  border-right: 1px solid var(--color-divider); background: #f0efec; /* mesmo fundo do retrato */
 }
-.about-photo img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: top; }
+/* Retrato aproximado: preenche a coluna inteira, apoiado numa linha de chão desenhada por CSS.
+   Em colunas estreitas corta um pouco do cabelo à direita, mas o rosto fica sempre visível. */
+.about-photo img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: 12% 100%; }
+.about-photo::after {
+  content: ""; position: absolute; left: 0; right: 0; bottom: 0; height: 2px; background: #201e1d; pointer-events: none;
+}
 .about-3 {
   flex: 5 1 360px; min-width: 0; padding: clamp(28px, 4.5vw, 56px);
   display: flex; flex-direction: column; justify-content: center; gap: 24px;
@@ -560,6 +565,7 @@ kbd {
   .folio { padding-left: 0; }
   .folio-label { padding: 0 16px; flex: 1; }
   .case-hero { min-height: 0; }
+  .about-photo { min-height: 0; aspect-ratio: 4 / 5; }
   .proj-row { grid-template-columns: 40px minmax(0, 1fr); grid-template-areas: "n t" "n c"; row-gap: 10px; padding: 20px var(--gutter); }
   .proj-row .y, .proj-row .a { display: none; }
   .proj-row .c { justify-self: start; }

@@ -23,7 +23,7 @@ export default function AboutPage({ locale }: { locale: Locale }) {
 
         <div className="about-photo grayscale">
           {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img src={`${basePath}/assets/img/image.png`} alt={t.photoAlt} />
+          <img src={`${basePath}/assets/img/sobre-retrato.webp`} alt={t.photoAlt} width={900} height={1117} />
         </div>
 
         <div className="about-3">
