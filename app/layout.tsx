@@ -1,22 +1,14 @@
 import type { Metadata } from 'next';
-import { Fraunces, Inter } from 'next/font/google';
+import { Archivo } from 'next/font/google';
 import './globals.css';
 import Providers from '@/components/Providers';
 import Nav from '@/components/Nav';
-import Footer from '@/components/Footer';
-import Curtain from '@/components/Curtain';
-import ScrollReveal from '@/components/ScrollReveal';
+import Folio from '@/components/Folio';
 import { basePath } from '@/lib/basePath';
 
-const fraunces = Fraunces({
+const archivo = Archivo({
   subsets: ['latin'],
-  variable: '--font-fraunces',
-  display: 'swap',
-});
-
-const inter = Inter({
-  subsets: ['latin'],
-  variable: '--font-inter',
+  variable: '--font-archivo',
   display: 'swap',
 });
 
@@ -36,17 +28,15 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="pt-BR" className={`${fraunces.variable} ${inter.variable} scroll-smooth`} suppressHydrationWarning>
-      <body className="bg-white dark:bg-zinc-950 text-zinc-800 dark:text-zinc-200 font-sans antialiased transition-colors duration-300">
+    <html lang="pt-BR" className={archivo.variable} suppressHydrationWarning>
+      <body>
         <Providers>
-          <a href="#main" className="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 bg-clay text-white text-sm font-medium px-4 py-2 rounded-lg z-[9999]">
-            Ir para conteúdo principal
-          </a>
-          <Nav />
-          <main id="main">{children}</main>
-          <Footer />
-          <Curtain />
-          <ScrollReveal />
+          <a href="#main" className="skip-link">Ir para conteúdo principal</a>
+          <div className="shell">
+            <Nav />
+            <main id="main" className="stage">{children}</main>
+            <Folio />
+          </div>
         </Providers>
       </body>
     </html>

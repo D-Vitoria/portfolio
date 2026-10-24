@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
-import TransitionLink from '@/components/TransitionLink';
+import Link from 'next/link';
+import { WriterIllustration } from '@/components/Illustrations';
 import { basePath } from '@/lib/basePath';
 
 export const metadata: Metadata = {
@@ -7,136 +8,119 @@ export const metadata: Metadata = {
   openGraph: { url: `https://d-vitoria.github.io${basePath}/sobre` },
 };
 
+const experiencia = [
+  {
+    org: 'AZ Tecnologia em Gestão',
+    role: 'QA Analyst',
+    when: 'abr 2024 — presente',
+    where: 'Penápolis, SP · CLT',
+    items: [
+      'Responsável pela qualidade do eFornecedor (ecossistema SIADES)',
+      'Automação de testes com Cypress e Playwright',
+      'Cenários BDD em Gherkin, integração com CI/CD',
+    ],
+  },
+  {
+    org: 'Davore Studio',
+    role: 'Fundadora & Designer',
+    when: '2023 — presente',
+    where: 'Penápolis, SP · autônoma',
+    items: [
+      'Identidade visual, branding e materiais gráficos para clientes',
+      'Figma, Illustrator, Canva, CorelDRAW',
+    ],
+  },
+  {
+    org: 'Freelancer',
+    role: 'Designer Gráfica',
+    when: 'set 2023 — dez 2023',
+    where: 'Penápolis, SP · freelance',
+    items: [
+      'Materiais gráficos para mídia impressa e digital',
+      'Canva, CorelDRAW, Illustrator e Photoshop',
+    ],
+  },
+];
+
+const formacao = [
+  { title: 'Bacharel em Publicidade e Propaganda', place: 'UNINTER — Centro Universitário Internacional', when: '2026 — 2030 · em andamento' },
+  { title: 'Tecnólogo em Design Gráfico', place: 'UNINTER — Centro Universitário Internacional', when: 'mai 2026 — mai 2028 · trancado' },
+];
+
 export default function Sobre() {
   return (
-    <div className="max-w-5xl mx-auto px-4 sm:px-8 py-20 sm:py-32">
-
-      <blockquote className="font-serif font-normal italic text-2xl sm:text-3xl lg:text-[36px] leading-snug text-zinc-900 dark:text-zinc-50 max-w-3xl mb-16 sm:mb-20 reveal">
-        &ldquo;Qualidade não é só ausência de bugs: é coerência entre o que se promete e o que se entrega.&rdquo;
-      </blockquote>
-
-      {/* Bio + skills */}
-      <div className="grid grid-cols-1 sm:grid-cols-[1fr_260px] gap-12 sm:gap-16 mb-24 reveal">
-        <div className="space-y-5 text-[15px] text-zinc-600 dark:text-zinc-400 leading-[1.85]">
-          <p>Sou Diana, analista de QA — hoje à frente da qualidade do <strong className="font-semibold text-zinc-900 dark:text-zinc-100">eFornecedor</strong>, sistema de cadastro e gestão de fornecedores dentro do ecossistema SIADES. No dia a dia, isso significa planejar testes, automatizar cenários e garantir que o que foi prometido chegue inteiro até quem usa.</p>
-          <p>Fora do expediente, construo a <strong className="font-semibold text-zinc-900 dark:text-zinc-100">Davore Studio</strong>, meu estúdio de design e comunicação, e curso Publicidade &amp; Propaganda e Design Gráfico — uma transição deliberada e gradual da engenharia de qualidade para a criação de marcas.</p>
-          <p>Essa lógica de coerência vale tanto para um sistema quanto para uma marca. É o que une os dois mundos que vivo.</p>
+    <>
+      <section className="about" aria-label="Sobre mim">
+        <div className="about-1">
+          <span className="big-num" style={{ fontSize: 'clamp(72px, 10vw, 140px)' }}>02</span>
+          <WriterIllustration />
+          <span style={{ fontSize: 14, fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase' }}>Sobre mim</span>
         </div>
-        <div className="space-y-6">
-          <div>
-            <p className="font-mono text-[10px] text-zinc-400 dark:text-zinc-600 uppercase tracking-widest mb-2">QA &amp; Automação</p>
-            <p className="text-sm text-zinc-600 dark:text-zinc-400 leading-relaxed">Cypress · Playwright · BDD / Gherkin · SQL · Scrum</p>
-          </div>
-          <div>
-            <p className="font-mono text-[10px] text-zinc-400 dark:text-zinc-600 uppercase tracking-widest mb-2">Design &amp; Comunicação</p>
-            <p className="text-sm text-zinc-600 dark:text-zinc-400 leading-relaxed">Figma · Illustrator · Photoshop · CorelDRAW · Canva</p>
-          </div>
-          <div>
-            <p className="font-mono text-[10px] text-zinc-400 dark:text-zinc-600 uppercase tracking-widest mb-2">Localização</p>
-            <p className="text-sm text-zinc-600 dark:text-zinc-400">Penápolis, SP — disponível remotamente</p>
-          </div>
+
+        <div className="about-photo grayscale">
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img src={`${basePath}/assets/img/image.png`} alt="Diana Vitória de Araújo" />
         </div>
-      </div>
 
-      {/* Experiência */}
-      <h2 className="font-serif font-semibold text-2xl sm:text-3xl text-zinc-900 dark:text-zinc-50 mb-10 reveal">Experiência</h2>
-      <ol className="relative ml-3 border-l-2 border-zinc-100 dark:border-zinc-800 mb-24 reveal" aria-label="Linha do tempo">
-
-        <li className="relative mb-12 pl-8">
-          <span className="absolute -left-[11px] top-1.5 w-5 h-5 rounded-full bg-clay border-2 border-clay shrink-0" aria-hidden="true" />
-          <div className="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-0.5">
-            <h3 className="font-serif font-semibold text-lg text-zinc-900 dark:text-zinc-50">AZ Tecnologia em Gestão</h3>
-            <span className="font-mono text-[11px] text-zinc-400 dark:text-zinc-600 shrink-0">abr 2024 — presente</span>
-          </div>
-          <p className="font-mono text-[10.5px] text-zinc-400 dark:text-zinc-600 mt-0.5">Penápolis, SP · CLT</p>
-          <ol className="exp-nested relative mt-6 ml-1 space-y-7">
-            <li className="relative pl-6">
-              <span className="absolute -left-[5px] top-1.5 w-2.5 h-2.5 rounded-full bg-clay shrink-0" aria-hidden="true" />
-              <div className="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-0.5">
-                <h4 className="font-semibold text-sm text-zinc-900 dark:text-zinc-100">QA Analyst</h4>
-                <span className="font-mono text-[11px] text-zinc-400 dark:text-zinc-600 shrink-0">abr 2024 — presente</span>
-              </div>
-              <ul className="mt-3 space-y-1.5 list-disc list-outside ml-4">
-                <li className="text-sm text-zinc-600 dark:text-zinc-400">Responsável pela qualidade do eFornecedor (ecossistema SIADES)</li>
-                <li className="text-sm text-zinc-600 dark:text-zinc-400">Automação de testes com Cypress e Playwright</li>
-                <li className="text-sm text-zinc-600 dark:text-zinc-400">Cenários BDD em Gherkin, integração com CI/CD</li>
-              </ul>
-            </li>
-          </ol>
-        </li>
-
-        <li className="relative mb-12 pl-8">
-          <span className="absolute -left-[11px] top-1.5 w-5 h-5 rounded-full bg-zinc-200 dark:bg-zinc-700 border-2 border-zinc-200 dark:border-zinc-700 shrink-0" aria-hidden="true" />
-          <div className="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-0.5">
-            <h3 className="font-serif font-semibold text-lg text-zinc-900 dark:text-zinc-50">Davore Studio</h3>
-            <span className="font-mono text-[11px] text-zinc-400 dark:text-zinc-600 shrink-0">2023 — presente</span>
-          </div>
-          <p className="font-mono text-[10.5px] text-zinc-400 dark:text-zinc-600 mt-0.5">Penápolis, SP · autônoma</p>
-          <ol className="exp-nested relative mt-6 ml-1 space-y-7">
-            <li className="relative pl-6">
-              <span className="absolute -left-[5px] top-1.5 w-2.5 h-2.5 rounded-full bg-zinc-200 dark:bg-zinc-700 shrink-0" aria-hidden="true" />
-              <div className="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-0.5">
-                <h4 className="font-semibold text-sm text-zinc-900 dark:text-zinc-100">Fundadora &amp; Designer</h4>
-                <span className="font-mono text-[11px] text-zinc-400 dark:text-zinc-600 shrink-0">2023 — presente</span>
-              </div>
-              <ul className="mt-3 space-y-1.5 list-disc list-outside ml-4">
-                <li className="text-sm text-zinc-600 dark:text-zinc-400">Identidade visual, branding e materiais gráficos para clientes</li>
-                <li className="text-sm text-zinc-600 dark:text-zinc-400">Figma, Illustrator, Canva, CorelDRAW</li>
-              </ul>
-            </li>
-          </ol>
-        </li>
-
-        <li className="relative pl-8">
-          <span className="absolute -left-[11px] top-1.5 w-5 h-5 rounded-full bg-zinc-200 dark:bg-zinc-700 border-2 border-zinc-200 dark:border-zinc-700 shrink-0" aria-hidden="true" />
-          <div className="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-0.5">
-            <h3 className="font-serif font-semibold text-lg text-zinc-900 dark:text-zinc-50">Freelancer</h3>
-            <span className="font-mono text-[11px] text-zinc-400 dark:text-zinc-600 shrink-0">set 2023 — dez 2023</span>
-          </div>
-          <p className="font-mono text-[10.5px] text-zinc-400 dark:text-zinc-600 mt-0.5">Penápolis, SP · freelance</p>
-          <ol className="exp-nested relative mt-6 ml-1">
-            <li className="relative pl-6">
-              <span className="absolute -left-[5px] top-1.5 w-2.5 h-2.5 rounded-full bg-zinc-200 dark:bg-zinc-700 shrink-0" aria-hidden="true" />
-              <div className="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-0.5">
-                <h4 className="font-semibold text-sm text-zinc-900 dark:text-zinc-100">Designer Gráfica</h4>
-                <span className="font-mono text-[11px] text-zinc-400 dark:text-zinc-600 shrink-0">4 meses</span>
-              </div>
-              <ul className="mt-3 space-y-1.5 list-disc list-outside ml-4">
-                <li className="text-sm text-zinc-600 dark:text-zinc-400">Materiais gráficos para mídia impressa e digital</li>
-                <li className="text-sm text-zinc-600 dark:text-zinc-400">Canva, CorelDRAW, Illustrator e Photoshop</li>
-              </ul>
-            </li>
-          </ol>
-        </li>
-      </ol>
-
-      {/* Formação */}
-      <h2 className="font-serif font-semibold text-2xl sm:text-3xl text-zinc-900 dark:text-zinc-50 mb-10 reveal">Formação</h2>
-      <div className="grid grid-cols-1 sm:grid-cols-2 gap-12 sm:gap-16 reveal">
-        <div>
-          <p className="font-mono text-[10px] text-zinc-400 dark:text-zinc-600 uppercase tracking-widest mb-5">Graduação</p>
-          <div className="space-y-5">
-            <div className="border-l-2 border-zinc-100 dark:border-zinc-800 pl-5">
-              <h3 className="font-serif font-semibold text-base text-zinc-900 dark:text-zinc-50">Bacharel em Publicidade e Propaganda</h3>
-              <p className="text-sm text-zinc-500 dark:text-zinc-400 mt-1">UNINTER — Centro Universitário Internacional</p>
-              <p className="font-mono text-[11px] text-zinc-400 dark:text-zinc-600 mt-1">2026 — 2030 · em andamento</p>
+        <div className="about-3">
+          <h1>Comunicação com método.</h1>
+          <p>
+            Sou Diana, analista de QA — hoje à frente da qualidade do <strong>eFornecedor</strong>, sistema de cadastro e gestão de fornecedores dentro do ecossistema SIADES. No dia a dia, isso significa planejar testes, automatizar cenários e garantir que o que foi prometido chegue inteiro até quem usa.
+          </p>
+          <p>
+            Fora do expediente, construo a <strong>Davore Studio</strong>, meu estúdio de design e comunicação, e curso Publicidade &amp; Propaganda e Design Gráfico — uma transição deliberada e gradual da engenharia de qualidade para a criação de marcas. Essa lógica de coerência vale tanto para um sistema quanto para uma marca.
+          </p>
+          <div className="facts">
+            <div>
+              <div className="meta-label">Formação</div>
+              <div className="v">Publicidade e Propaganda</div>
             </div>
-            <div className="border-l-2 border-zinc-100 dark:border-zinc-800 pl-5">
-              <h3 className="font-serif font-semibold text-base text-zinc-900 dark:text-zinc-50">Tecnólogo em Design Gráfico</h3>
-              <p className="text-sm text-zinc-500 dark:text-zinc-400 mt-1">UNINTER — Centro Universitário Internacional</p>
-              <p className="font-mono text-[11px] text-zinc-400 dark:text-zinc-600 mt-1">mai 2026 — mai 2028 · trancado</p>
+            <div>
+              <div className="meta-label">Atualmente</div>
+              <div className="v">Analista de QA</div>
             </div>
           </div>
         </div>
-        <div>
-          <p className="font-mono text-[10px] text-zinc-400 dark:text-zinc-600 uppercase tracking-widest mb-5">Certificações</p>
-          <p className="text-sm text-zinc-500 dark:text-zinc-400 mb-4">5 certificados em Design e Comunicação.</p>
-          <TransitionLink href="/certificacoes" className="inline-flex items-center gap-1.5 text-sm font-medium text-clay hover:underline transition-colors">
-            Ver todas as certificações →
-          </TransitionLink>
-        </div>
-      </div>
+      </section>
 
-    </div>
+      <section className="more" aria-labelledby="exp">
+        <div className="more-side"><h2 id="exp" className="label" style={{ fontFamily: 'inherit' }}>Experiência</h2></div>
+        <div className="more-body">
+          <ol className="ruled">
+            {experiencia.map((e) => (
+              <li key={e.org}>
+                <div className="row-top">
+                  <span className="row-title">{e.org} · {e.role}</span>
+                  <span className="row-meta">{e.when}</span>
+                </div>
+                <div className="row-sub">{e.where}</div>
+                <ul>{e.items.map((i) => <li key={i}>{i}</li>)}</ul>
+              </li>
+            ))}
+          </ol>
+        </div>
+      </section>
+
+      <section className="more" aria-labelledby="form">
+        <div className="more-side"><h2 id="form" className="label" style={{ fontFamily: 'inherit' }}>Formação</h2></div>
+        <div className="more-body">
+          <ol className="ruled">
+            {formacao.map((f) => (
+              <li key={f.title}>
+                <div className="row-top">
+                  <span className="row-title">{f.title}</span>
+                  <span className="row-meta">{f.when}</span>
+                </div>
+                <div className="row-sub">{f.place}</div>
+              </li>
+            ))}
+          </ol>
+          <div className="link-row">
+            <Link href="/certificacoes" className="btn btn-secondary">Ver certificações <span aria-hidden="true">→</span></Link>
+            <Link href="/servicos" className="btn btn-secondary">Ver serviços <span aria-hidden="true">→</span></Link>
+          </div>
+        </div>
+      </section>
+    </>
   );
 }
