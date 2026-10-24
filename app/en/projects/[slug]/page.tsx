@@ -1,0 +1,22 @@
+import type { Metadata } from 'next';
+import ProjectPage from '@/components/pages/ProjectPage';
+import { getProjects } from '@/lib/projects';
+
+export const dynamicParams = false;
+
+export function generateStaticParams() {
+  return getProjects('en').map((p) => ({ slug: p.slug }));
+}
+
+type Props = { params: Promise<{ slug: string }> };
+
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const { slug } = await params;
+  const p = getProjects('en').find((x) => x.slug === slug);
+  return p ? { title: p.title, description: p.lead } : {};
+}
+
+export default async function Page({ params }: Props) {
+  const { slug } = await params;
+  return <ProjectPage locale="en" slug={slug} />;
+}

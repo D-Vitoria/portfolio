@@ -1,12 +1,8 @@
-import type { Metadata } from 'next';
 import ProjectList from '@/components/ProjectList';
-import { basePath } from '@/lib/basePath';
+import { pageMetadata } from '@/lib/meta';
 
-export const metadata: Metadata = {
-  title: 'Trabalhos',
-  openGraph: { url: `https://d-vitoria.github.io${basePath}/trabalhos` },
-};
+export const metadata = pageMetadata('pt', 'projects');
 
-export default function Trabalhos() {
-  return <ProjectList />;
+export default function Page() {
+  return <ProjectList locale="pt" />;
 }

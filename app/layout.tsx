@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import { Archivo } from 'next/font/google';
 import './globals.css';
 import Providers from '@/components/Providers';
+import Shell from '@/components/Shell';
 import Nav from '@/components/Nav';
 import Folio from '@/components/Folio';
 import { basePath } from '@/lib/basePath';
@@ -19,7 +20,6 @@ export const metadata: Metadata = {
   metadataBase: new URL('https://d-vitoria.github.io'),
   openGraph: {
     type: 'website',
-    locale: 'pt_BR',
     siteName: 'Diana Vitória de Araújo',
     images: [{ url: `${basePath}/assets/img/og.jpg`, width: 1200, height: 630 }],
   },
@@ -31,12 +31,12 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     <html lang="pt-BR" className={archivo.variable} suppressHydrationWarning>
       <body>
         <Providers>
-          <a href="#main" className="skip-link">Ir para conteúdo principal</a>
-          <div className="shell">
+          <Shell>
+            <a href="#main" className="skip-link">Ir para conteúdo principal / Skip to main content</a>
             <Nav />
             <main id="main" className="stage">{children}</main>
             <Folio />
-          </div>
+          </Shell>
         </Providers>
       </body>
     </html>

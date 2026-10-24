@@ -1,13 +1,15 @@
 'use client';
 import { useRouter } from 'next/navigation';
 import { useCallback, useEffect } from 'react';
-import { pad, projects } from '@/lib/projects';
-import { useSection } from '@/lib/sections';
+import { routes } from '@/lib/i18n';
+import { getProjects, pad } from '@/lib/projects';
+import { useSections } from '@/lib/route';
 
 export default function Folio() {
   const router = useRouter();
-  const { sections, index, extraLabel, projectSlug } = useSection();
+  const { locale, t, sections, index, extraLabel, projectSlug } = useSections();
   const total = sections.length;
+  const projects = getProjects(locale);
   const projectIndex = projectSlug ? projects.findIndex((p) => p.slug === projectSlug) : -1;
   const inProject = projectIndex >= 0;
 
@@ -15,7 +17,7 @@ export default function Folio() {
     (d: number) => {
       if (inProject) {
         const n = projects.length;
-        router.push(`/trabalhos/${projects[(projectIndex + d + n) % n].slug}`);
+        router.push(`${routes.projects[locale]}/${projects[(projectIndex + d + n) % n].slug}`);
         return;
       }
       if (index < 0) return;
@@ -23,23 +25,25 @@ export default function Folio() {
       const next = extraLabel ? (d < 0 ? 1 : 2) : Math.min(total - 1, Math.max(0, index + d));
       if (extraLabel || next !== index) router.push(sections[next].href);
     },
-    [extraLabel, inProject, index, projectIndex, router, sections, total],
+    // `projects` e `sections` mudam só com o idioma.
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+    [extraLabel, inProject, index, locale, projectIndex, router, total],
   );
 
   useEffect(() => {
     const onKey = (e: KeyboardEvent) => {
-      const t = e.target as HTMLElement | null;
-      if (t && /INPUT|TEXTAREA|SELECT/.test(t.tagName)) return;
+      const target = e.target as HTMLElement | null;
+      if (target && /INPUT|TEXTAREA|SELECT/.test(target.tagName)) return;
       if (e.metaKey || e.ctrlKey || e.altKey) return;
       if (e.key === 'ArrowRight') step(1);
       else if (e.key === 'ArrowLeft') step(-1);
-      else if (e.key === 'Escape' && inProject) router.push('/trabalhos');
+      else if (e.key === 'Escape' && inProject) router.push(routes.projects[locale]);
     };
     window.addEventListener('keydown', onKey);
     return () => window.removeEventListener('keydown', onKey);
-  }, [inProject, router, step]);
+  }, [inProject, locale, router, step]);
 
-  const label = inProject ? 'Projeto' : extraLabel ?? (index >= 0 ? sections[index].label : '');
+  const label = inProject ? t.ui.project : extraLabel ?? (index >= 0 ? sections[index].label : '');
   const num = inProject
     ? `${pad(projectIndex + 1)} / ${pad(projects.length)}`
     : extraLabel || index < 0
@@ -47,14 +51,24 @@ export default function Folio() {
       : `${pad(index + 1)} / ${pad(total)}`;
 
   return (
-    <footer className="folio">
-      <span className="folio-credit">Diana Vitória de Araújo · Portfolio 2026</span>
+    <footer className="folio" lang={locale}>
+      <div className="folio-credit">
+        <span>{t.ui.credit}</span>
+        <span className="folio-links">
+          <a href="https://www.linkedin.com/in/d-vitoria/" target="_blank" rel="noopener">LinkedIn ↗</a>
+          <a href="https://github.com/D-Vitoria" target="_blank" rel="noopener">GitHub ↗</a>
+        </span>
+        <span className="folio-hint" aria-hidden="true">
+          <kbd>←</kbd><kbd>→</kbd> {inProject ? t.ui.hintProjects : t.ui.hintPages}
+          {inProject && <> · <kbd>Esc</kbd> {t.ui.hintEsc}</>}
+        </span>
+      </div>
       <div className="folio-right">
         <span className="folio-label">
           {label} {num && <span className="num">{num}</span>}
         </span>
-        <button type="button" className="folio-btn" onClick={() => step(-1)} aria-label="Anterior">←</button>
-        <button type="button" className="folio-btn next" onClick={() => step(1)} aria-label="Próxima">→</button>
+        <button type="button" className="folio-btn" onClick={() => step(-1)} aria-label={t.ui.prev}>←</button>
+        <button type="button" className="folio-btn next" onClick={() => step(1)} aria-label={t.ui.next}>→</button>
       </div>
     </footer>
   );
