@@ -28,7 +28,7 @@ export default function ServicesPage({ locale }: { locale: Locale }) {
         ))}
       </div>
 
-      <section className="more" aria-labelledby="process" style={{ borderTop: '2px solid var(--color-text)' }}>
+      <section className="more" aria-labelledby="process">
         <div className="more-side">
           <h2 id="process" className="label" style={{ fontFamily: 'inherit' }}>{t.process.label}</h2>
           <p className="more-title">{t.process.title}</p>
@@ -64,7 +64,7 @@ export default function ServicesPage({ locale }: { locale: Locale }) {
         </div>
       </section>
 
-      <div className="sheet-cta" style={{ borderTop: '2px solid var(--color-text)' }}>
+      <div className="sheet-cta">
         <Link href={routes.contact[locale]} className="btn btn-primary" style={{ minWidth: 240 }}>
           {t.cta} <span aria-hidden="true">→</span>
         </Link>

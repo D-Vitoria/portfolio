@@ -65,7 +65,7 @@ const pt = {
     heading: 'Comunicação com método.',
     photoAlt: 'Diana Vitória de Araújo',
     bio: [
-      'Sou Diana, analista de QA — hoje à frente da qualidade do **eFornecedor**, sistema de cadastro e gestão de fornecedores dentro do ecossistema SIADES. No dia a dia, isso significa planejar testes, automatizar cenários e garantir que o que foi prometido chegue inteiro até quem usa.',
+      'Sou Diana, analista de QA — hoje à frente da qualidade do **eFornecedor**, sistema de cadastro e gestão de fornecedores dentro do ecossistema dos produtos da AZ. No dia a dia, isso significa planejar testes, automatizar cenários e garantir que o que foi prometido chegue inteiro até quem usa.',
       'Fora do expediente, construo a **Davore Studio**, meu estúdio de design e comunicação, e curso Publicidade & Propaganda e Design Gráfico — uma transição deliberada e gradual da engenharia de qualidade para a criação de marcas. Essa lógica de coerência vale tanto para um sistema quanto para uma marca.',
     ],
     facts: [
@@ -74,18 +74,18 @@ const pt = {
     ],
     letter: {
       label: 'Em poucas linhas',
-      text: 'Trabalho com qualidade de software e crio marcas. Os dois partem da mesma pergunta: o que foi prometido está chegando inteiro a quem usa? Estou levando esse olhar, cada vez mais, para a comunicação.',
-      sign: '— Diana',
+      text: 'Trabalho duro vence o talento natural.',
+      sign: '— Rock Lee',
     },
     method: {
       label: 'Como eu trabalho',
       title: 'Um método, dois mundos.',
       steps: [
-        { t: 'Entender o que foi prometido', d: 'Briefing, requisito, expectativa: tudo começa por saber qual é a promessa.' },
-        { t: 'Definir o critério', d: 'O que é "pronto"? Um guia de marca, um critério de aceite, uma lista do que não pode falhar.' },
-        { t: 'Construir', d: 'Design, texto ou teste automatizado: a execução segue o critério, não o improviso.' },
-        { t: 'Revisar com checklist', d: 'Consistência, detalhe e o que a pessoa realmente vê. O olhar de QA aplicado a qualquer entrega.' },
-        { t: 'Entregar e acompanhar', d: 'Entrega documentada, ajustes rápidos e aprendizado para o próximo projeto.' },
+        { t: 'Entender o que foi prometido', d: 'Tudo começa pela promessa.' },
+        { t: 'Definir o critério', d: 'Um guia de marca, um critério de aceite.' },
+        { t: 'Construir', d: 'A execução segue o critério, não o improviso.' },
+        { t: 'Revisar com checklist', d: 'Consistência e detalhe: o olhar de QA em toda entrega.' },
+        { t: 'Entregar e acompanhar', d: 'Entrega documentada e aprendizado para o próximo.' },
       ],
     },
     compare: {
@@ -137,7 +137,7 @@ const pt = {
           tag: 'Qualidade',
           kind: 'outline' as TagKind,
           items: [
-            'Responsável pela qualidade do eFornecedor (ecossistema SIADES)',
+            'Responsável pela qualidade do eFornecedor (ecossistema dos produtos da AZ)',
             'Automação de testes com Cypress e Playwright',
             'Cenários BDD em Gherkin, integração com CI/CD',
           ],
@@ -364,7 +364,7 @@ const en: Content = {
     heading: 'Communication with method.',
     photoAlt: 'Diana Vitória de Araújo',
     bio: [
-      "I'm Diana, a QA analyst — currently leading quality for **eFornecedor**, a supplier registration and management system within the SIADES ecosystem. Day to day, that means planning tests, automating scenarios and making sure what was promised arrives whole to the people who use it.",
+      "I'm Diana, a QA analyst — currently leading quality for **eFornecedor**, a supplier registration and management system within the AZ products ecosystem. Day to day, that means planning tests, automating scenarios and making sure what was promised arrives whole to the people who use it.",
       "Outside work hours I'm building **Davore Studio**, my design and communication studio, and studying Advertising and Graphic Design — a deliberate, gradual move from quality engineering to brand creation. That logic of coherence applies to a system as much as to a brand.",
     ],
     facts: [
@@ -373,18 +373,18 @@ const en: Content = {
     ],
     letter: {
       label: 'In a few lines',
-      text: "I work in software quality and I create brands. Both start from the same question: is what was promised reaching the people who use it, intact? I'm bringing that eye, more and more, to communication.",
-      sign: '— Diana',
+      text: 'Hard work beats natural talent.',
+      sign: '— Rock Lee',
     },
     method: {
       label: 'How I work',
       title: 'One method, two worlds.',
       steps: [
-        { t: 'Understand what was promised', d: 'Brief, requirement, expectation: everything starts by knowing what the promise is.' },
-        { t: 'Define the criteria', d: 'What does "done" mean? A brand guide, an acceptance criterion, a list of what cannot fail.' },
-        { t: 'Build', d: 'Design, copy or automated test: execution follows the criteria, not improvisation.' },
-        { t: 'Review with a checklist', d: 'Consistency, detail and what people actually see. A QA eye applied to any deliverable.' },
-        { t: 'Deliver and follow up', d: 'Documented delivery, quick adjustments and lessons for the next project.' },
+        { t: 'Understand what was promised', d: 'Everything starts with the promise.' },
+        { t: 'Define the criteria', d: 'A brand guide, an acceptance criterion.' },
+        { t: 'Build', d: 'Execution follows the criteria, not improvisation.' },
+        { t: 'Review with a checklist', d: 'Consistency and detail: a QA eye on every deliverable.' },
+        { t: 'Deliver and follow up', d: 'Documented delivery and lessons for the next one.' },
       ],
     },
     compare: {
@@ -436,7 +436,7 @@ const en: Content = {
           tag: 'Quality',
           kind: 'outline',
           items: [
-            'In charge of quality for eFornecedor (SIADES ecosystem)',
+            'In charge of quality for eFornecedor (AZ products ecosystem)',
             'Test automation with Cypress and Playwright',
             'BDD scenarios in Gherkin, CI/CD integration',
           ],
