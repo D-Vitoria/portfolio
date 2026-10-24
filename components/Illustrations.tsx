@@ -92,3 +92,35 @@ export function PlaneIllustration() {
     </svg>
   );
 }
+
+/** Lápis que escreve uma linha (Serviços). */
+export function PencilIllustration() {
+  return (
+    <svg className="illo" viewBox="0 0 220 120" width="220" style={{ maxWidth: '100%', height: 'auto', flex: 'none' }} aria-hidden="true">
+      <Draw d="M8 104c22-12 40 10 62 0s40 10 62 0 40-10 60 0" delay={1.1} dur={1.6} ease="ease-in-out" stroke="var(--color-accent)" width={2.4} />
+      <g transform="rotate(-24 120 56)">
+        <Draw d="M60 44H150L178 57L150 70H60" delay={0.2} dur={1.3} />
+        <Draw d="M60 44V70M76 44V70M150 44V70" delay={0.5} dur={1.1} />
+        <Draw d="M164 52L178 57L164 62" delay={0.9} dur={0.7} />
+      </g>
+      <path className="illo-on" d="M186 22v12M180 28h12" stroke="var(--color-accent)" style={lightOn(2.5)} />
+    </svg>
+  );
+}
+
+/** Selo com estrela e fitas (Certificações). */
+export function StampIllustration() {
+  return (
+    <svg className="illo" viewBox="0 0 160 150" width="150" style={{ maxWidth: '100%', height: 'auto', flex: 'none' }} aria-hidden="true">
+      <Draw d="M80 14a44 44 0 1 1 0 88a44 44 0 1 1 0-88z" delay={0.2} dur={1.4} />
+      <Draw d="M80 24a34 34 0 1 1 0 68a34 34 0 1 1 0-68z" delay={0.5} dur={1.3} />
+      <Draw d="M60 98L50 142L72 130L82 146" delay={1.2} dur={1} />
+      <Draw d="M100 98L110 142L88 130L78 146" delay={1.4} dur={1} />
+      <path
+        className="illo-on"
+        d="M80 38L86 52L102 53L90 63L94 79L80 70L66 79L70 63L58 53L74 52Z"
+        style={{ ...accent, ...lightOn(2.2) }}
+      />
+    </svg>
+  );
+}

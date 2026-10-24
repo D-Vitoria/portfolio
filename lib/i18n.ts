@@ -3,7 +3,7 @@ import { getProjects } from './projects';
 export type Locale = 'pt' | 'en';
 export const other = (l: Locale): Locale => (l === 'pt' ? 'en' : 'pt');
 
-export type RouteKey = 'home' | 'about' | 'projects' | 'contact' | 'services' | 'certs';
+export type RouteKey = 'home' | 'about' | 'projects' | 'contact' | 'services' | 'certs' | 'print';
 
 /** Mesma página em cada idioma. O português fica na raiz; o inglês, sob /en. */
 export const routes: Record<RouteKey, Record<Locale, string>> = {
@@ -13,6 +13,7 @@ export const routes: Record<RouteKey, Record<Locale, string>> = {
   contact: { pt: '/contato', en: '/en/contact' },
   services: { pt: '/servicos', en: '/en/services' },
   certs: { pt: '/certificacoes', en: '/en/certifications' },
+  print: { pt: '/imprimir', en: '/en/print' },
 };
 
 /** As quatro "páginas" da revista, na ordem em que se folheiam. */

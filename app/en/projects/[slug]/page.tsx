@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import ProjectPage from '@/components/pages/ProjectPage';
+import { shareImage } from '@/lib/meta';
 import { getProjects } from '@/lib/projects';
 
 export const dynamicParams = false;
@@ -13,7 +14,14 @@ type Props = { params: Promise<{ slug: string }> };
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params;
   const p = getProjects('en').find((x) => x.slug === slug);
-  return p ? { title: p.title, description: p.lead } : {};
+  if (!p) return {};
+  const image = shareImage('en', 'projects');
+  return {
+    title: p.title,
+    description: p.lead,
+    openGraph: { images: [{ url: image, width: 1200, height: 630 }] },
+    twitter: { card: 'summary_large_image', images: [image] },
+  };
 }
 
 export default async function Page({ params }: Props) {

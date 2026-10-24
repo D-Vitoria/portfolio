@@ -31,6 +31,15 @@ const pt = {
     contact: 'Contato',
     services: 'Serviços',
     certs: 'Certificações',
+    print: 'Portfolio para imprimir',
+  },
+  print: {
+    heading: 'Portfolio 2026',
+    button: 'Imprimir / salvar em PDF',
+    hint: 'Na janela de impressão, escolha "Salvar como PDF".',
+    back: '← Voltar ao site',
+    projects: 'Projetos',
+    contact: 'Contato',
   },
   home: {
     aria: 'Apresentação',
@@ -47,6 +56,8 @@ const pt = {
     ],
     page: 'p.',
     cta: 'Ver projetos',
+    availableOn: 'disponível para projetos',
+    availableOff: 'agenda fechada no momento',
   },
   about: {
     aria: 'Sobre mim',
@@ -61,6 +72,11 @@ const pt = {
       { k: 'Formação', v: 'Publicidade e Propaganda' },
       { k: 'Atualmente', v: 'Analista de QA' },
     ],
+    letter: {
+      label: 'Em poucas linhas',
+      text: 'Trabalho com qualidade de software e crio marcas. Os dois partem da mesma pergunta: o que foi prometido está chegando inteiro a quem usa? Estou levando esse olhar, cada vez mais, para a comunicação.',
+      sign: '— Diana',
+    },
     method: {
       label: 'Como eu trabalho',
       title: 'Um método, dois mundos.',
@@ -200,6 +216,7 @@ const pt = {
       { label: 'GitHub', value: '/D-Vitoria', href: 'https://github.com/D-Vitoria' },
     ],
     cv: 'Baixar currículo (PDF)',
+    printLink: 'Versão para imprimir',
     form: {
       name: 'Nome',
       namePh: 'Seu nome',
@@ -244,6 +261,27 @@ const pt = {
       },
     ],
     cta: 'Vamos conversar',
+    process: {
+      label: 'Como funciona',
+      title: 'Do primeiro contato à entrega.',
+      steps: [
+        { t: 'Conversa e briefing', d: 'Entendo o objetivo, o público e o prazo. Você me conta o que precisa.' },
+        { t: 'Proposta', d: 'Escopo, entregas e prazo combinados antes de começar.' },
+        { t: 'Execução', d: 'Trabalho em etapas, com pontos de validação pelo caminho.' },
+        { t: 'Revisão', d: 'Ajustes a partir do seu retorno, dentro do que foi combinado.' },
+        { t: 'Entrega', d: 'Arquivos finais organizados e, quando fizer sentido, um guia de uso.' },
+      ],
+    },
+    faq: {
+      label: 'Perguntas frequentes',
+      items: [
+        { q: 'Você trabalha só com QA ou também com design?', a: 'Com os dois. Atuo como analista de QA e também crio identidade visual e peças de comunicação com a Davore Studio.' },
+        { q: 'Atende clientes de fora de Penápolis?', a: 'Sim. Sou de Penápolis, SP, e estou disponível para trabalhar remotamente.' },
+        { q: 'Quais ferramentas você usa?', a: 'Em QA: Cypress, Playwright, BDD com Gherkin e SQL. Em design: Figma, Illustrator, Photoshop, CorelDRAW e Canva.' },
+        { q: 'Você faz identidade visual completa?', a: 'Faço: naming, logotipo, paleta de cores, sistema tipográfico e diretrizes de uso.' },
+        { q: 'Como começo um projeto?', a: 'Pelo formulário de contato ou pelo e-mail. Me conte o que precisa e eu respondo para combinarmos os próximos passos.' },
+      ],
+    },
   },
   certs: {
     heading: 'Certificações',
@@ -292,6 +330,15 @@ const en: Content = {
     contact: 'Contact',
     services: 'Services',
     certs: 'Certifications',
+    print: 'Printable portfolio',
+  },
+  print: {
+    heading: 'Portfolio 2026',
+    button: 'Print / save as PDF',
+    hint: 'In the print dialog, choose "Save as PDF".',
+    back: '← Back to the site',
+    projects: 'Projects',
+    contact: 'Contact',
   },
   home: {
     aria: 'Introduction',
@@ -308,6 +355,8 @@ const en: Content = {
     ],
     page: 'p.',
     cta: 'View projects',
+    availableOn: 'available for projects',
+    availableOff: 'booked at the moment',
   },
   about: {
     aria: 'About me',
@@ -322,6 +371,11 @@ const en: Content = {
       { k: 'Education', v: 'Advertising' },
       { k: 'Currently', v: 'QA Analyst' },
     ],
+    letter: {
+      label: 'In a few lines',
+      text: "I work in software quality and I create brands. Both start from the same question: is what was promised reaching the people who use it, intact? I'm bringing that eye, more and more, to communication.",
+      sign: '— Diana',
+    },
     method: {
       label: 'How I work',
       title: 'One method, two worlds.',
@@ -461,6 +515,7 @@ const en: Content = {
       { label: 'GitHub', value: '/D-Vitoria', href: 'https://github.com/D-Vitoria' },
     ],
     cv: 'Download résumé (PDF)',
+    printLink: 'Printable version',
     form: {
       name: 'Name',
       namePh: 'Your name',
@@ -505,6 +560,27 @@ const en: Content = {
       },
     ],
     cta: "Let's talk",
+    process: {
+      label: 'How it works',
+      title: 'From first contact to delivery.',
+      steps: [
+        { t: 'Conversation and brief', d: 'I understand the goal, the audience and the deadline. You tell me what you need.' },
+        { t: 'Proposal', d: 'Scope, deliverables and timeline agreed before starting.' },
+        { t: 'Execution', d: 'I work in stages, with validation points along the way.' },
+        { t: 'Review', d: 'Adjustments based on your feedback, within what was agreed.' },
+        { t: 'Delivery', d: 'Organized final files and, when it makes sense, a usage guide.' },
+      ],
+    },
+    faq: {
+      label: 'FAQ',
+      items: [
+        { q: 'Do you only do QA, or design as well?', a: 'Both. I work as a QA analyst and also create visual identity and communication pieces with Davore Studio.' },
+        { q: 'Do you work with clients outside Penápolis?', a: "Yes. I'm based in Penápolis, SP, Brazil, and available to work remotely." },
+        { q: 'Which tools do you use?', a: 'In QA: Cypress, Playwright, BDD with Gherkin and SQL. In design: Figma, Illustrator, Photoshop, CorelDRAW and Canva.' },
+        { q: 'Do you do full visual identities?', a: 'Yes: naming, logo, color palette, typographic system and usage guidelines.' },
+        { q: 'How do I start a project?', a: "Through the contact form or by email. Tell me what you need and I'll reply so we can agree on the next steps." },
+      ],
+    },
   },
   certs: {
     heading: 'Certifications',

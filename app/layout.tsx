@@ -5,7 +5,7 @@ import Providers from '@/components/Providers';
 import Shell from '@/components/Shell';
 import Nav from '@/components/Nav';
 import Folio from '@/components/Folio';
-import { basePath } from '@/lib/basePath';
+import Analytics from '@/components/Analytics';
 
 const archivo = Archivo({
   subsets: ['latin'],
@@ -21,7 +21,6 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'website',
     siteName: 'Diana Vitória de Araújo',
-    images: [{ url: `${basePath}/assets/img/og.jpg`, width: 1200, height: 630 }],
   },
   twitter: { card: 'summary_large_image' },
 };
@@ -38,6 +37,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             <Folio />
           </Shell>
         </Providers>
+        <Analytics />
       </body>
     </html>
   );

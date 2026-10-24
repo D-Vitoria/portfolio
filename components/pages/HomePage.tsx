@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import { HeroIllustration } from '@/components/Illustrations';
 import { content } from '@/lib/content';
+import { available } from '@/lib/availability';
 import { routes, type Locale } from '@/lib/i18n';
 
 export default function HomePage({ locale }: { locale: Locale }) {
@@ -24,6 +25,10 @@ export default function HomePage({ locale }: { locale: Locale }) {
         <div style={{ display: 'flex', flexDirection: 'column', gap: 14 }}>
           <div className="stamp">{t.stamp[0]}<br />{t.stamp[1]}</div>
           <span style={{ fontSize: 15, color: 'var(--color-neutral-800)' }}>{t.sub}</span>
+          <span className={`availability${available ? ' on' : ''}`}>
+            <span className="dot" aria-hidden="true" />
+            {available ? t.availableOn : t.availableOff}
+          </span>
         </div>
 
         <div style={{ display: 'flex', flexDirection: 'column', gap: 10 }}>

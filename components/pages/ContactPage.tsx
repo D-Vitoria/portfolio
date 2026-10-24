@@ -1,8 +1,9 @@
 import ContactForm from '@/components/ContactForm';
 import { PlaneIllustration } from '@/components/Illustrations';
 import { basePath } from '@/lib/basePath';
+import Link from 'next/link';
 import { content } from '@/lib/content';
-import type { Locale } from '@/lib/i18n';
+import { routes, type Locale } from '@/lib/i18n';
 
 export default function ContactPage({ locale }: { locale: Locale }) {
   const t = content[locale].contact;
@@ -26,6 +27,9 @@ export default function ContactPage({ locale }: { locale: Locale }) {
         <a className="btn btn-secondary" href={`${basePath}/assets/diana-vitoria-cv.pdf`} download style={{ alignSelf: 'flex-start', minWidth: 260 }}>
           {t.cv} <span aria-hidden="true">↓</span>
         </a>
+        <Link className="btn btn-secondary" href={routes.print[locale]} style={{ alignSelf: 'flex-start', minWidth: 260 }}>
+          {t.printLink} <span aria-hidden="true">⎙</span>
+        </Link>
       </div>
       <ContactForm locale={locale} />
     </section>

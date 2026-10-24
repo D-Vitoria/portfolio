@@ -42,6 +42,18 @@ export default function AboutPage({ locale }: { locale: Locale }) {
         </div>
       </section>
 
+      <section className="more" aria-labelledby="letter">
+        <div className="more-side">
+          <h2 id="letter" className="label" style={{ fontFamily: 'inherit' }}>{t.letter.label}</h2>
+        </div>
+        <div className="more-body">
+          <blockquote className="letter">
+            <p>{t.letter.text}</p>
+            <footer>{t.letter.sign}</footer>
+          </blockquote>
+        </div>
+      </section>
+
       <section className="more" aria-labelledby="method">
         <div className="more-side">
           <h2 id="method" className="label" style={{ fontFamily: 'inherit' }}>{t.method.label}</h2>
